@@ -19,11 +19,10 @@ alias ll="ls -alh"
 alias h="history"
 alias hg="history -1000 | grep -i"
 alias ..="cd .."
+alias ...="cd ../.."
 alias v="nvim"
 alias ins="sudo pacman -S"
 alias update="sudo pacman -Syyu"
-alias cat="bat"
-alias ccat="bat --plain"
 alias rm="trash-put"
 
 # GIT
