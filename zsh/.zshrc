@@ -12,10 +12,10 @@ else
 fi
 
 # Aliases
-# alias ls="exa -lh --icons --group-directories-first"
-# alias ll="exa -alh --icons --group-directories-first"
-alias ls="ls -lh"
-alias ll="ls -alh"
+alias ls="exa -lh --icons --group-directories-first"
+alias ll="exa -alh --icons --group-directories-first"
+# alias ls="ls -lh"
+# alias ll="ls -alh"
 alias h="history"
 alias hg="history -1000 | grep -i"
 alias ..="cd .."
@@ -67,7 +67,7 @@ export BLOCK_SIZE="'1"          # Add commas to file sizes
 # PATH
 typeset -U path                 # keep duplicates out of the path
 path+=(.)                       # append current directory to path (controversial)
-
+. "$HOME/.cargo/env"            # For sh/bash/zsh/ash/dash/pdksh
 # BINDKEY
 bindkey -e
 bindkey '\e[3~' delete-char
@@ -80,3 +80,20 @@ bindkey ' '  magic-space
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions.zsh
 eval "$(starship init zsh)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/mikr/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mikr/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mikr/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/mikr/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+fastfetch
