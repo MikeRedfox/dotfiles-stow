@@ -48,6 +48,6 @@ battery 1 {
 }
 
 time {
-	format = "<span background='#2587cc'>   </span><span background='#bfbaac'>  %d %B %Y | %H:%M  </span>"
+	format = "<span background='#2587cc'>   </span><span background='#bfbaac'>  %d %B %Y | %H:%M  </span>"
 }
 
