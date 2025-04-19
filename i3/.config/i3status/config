@@ -13,22 +13,22 @@ order += "battery 1"
 order += "time"
 
 load {
-	format = "<span background='#b08500'>    </span><span background='#bfbaac'>  %5min Load  </span>"
+	format = "<span background='#f6c177'>    </span><span background='#2a273f' foreground='#e3e3e3'>  %5min Load  </span>"
 }
 
 cpu_temperature 0 {
-	format = "<span background='#d12f2c'>    </span><span background='#bfbaac'>  %degrees °C  </span>"
+	format = "<span background='#eb6f92'>    </span><span background='#2a273f'  foreground='#e3e3e3'>  %degrees °C  </span>"
 	path = "/sys/class/thermal/thermal_zone0/temp"
 }
 
 wireless wlp2s0 {
-	format_up = "<span background='#289c93'>    </span><span background='#bfbaac'>  %essid  </span>"
-	format_down = "<span background='#289c93'>    </span><span background='#bfbaac'>  Disconnected  </span>"
+	format_up = "<span background='#289c93'>    </span><span background='#2a273f'>  %essid  </span>"
+	format_down = "<span background='#289c93'>    </span><span background='#2a273f'>  Disconnected  </span>"
 }
 
 volume master {
-	format = "<span background='#696ebf'>  󰕾  </span><span background='#bfbaac'>  %volume  </span>"
-	format_muted = "<span background='#696ebf'>    </span><span background='#bfbaac'>  Muted  </span>"
+	format = "<span background='#3e8fb0'>  󰕾  </span><span  foreground='#e3e3e3' background='#2a273f'>  %volume  </span>"
+	format_muted = "<span background='#3e8fb0'>    </span><span  foreground='#e3e3e3' background='#2a273f'>  Muted  </span>"
 	device = "default"
 	mixer = "Master"
 	mixer_idx = 0
@@ -36,7 +36,7 @@ volume master {
 
 battery 1 {
 	last_full_capacity = true
-	format = "<span background='#819400'>  %status  </span><span background='#bfbaac'>  %percentage  </span>"
+	format = "<span background='#c4a7e7'>  %status  </span><span  foreground='#e3e3e3' background='#2a273f'>  %percentage  </span>"
 	format_down = "No Battery"
 	status_chr = ""
 	status_bat = ""
@@ -48,6 +48,6 @@ battery 1 {
 }
 
 time {
-	format = "<span background='#2587cc'>   </span><span background='#bfbaac'>  %d %B %Y | %H:%M  </span>"
+	format = "<span background='#9ccfd8'>   </span><span  foreground='#e3e3e3' background='#2a273f'>  %d %B %Y | %H:%M  </span>"
 }
 
