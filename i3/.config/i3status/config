@@ -10,6 +10,7 @@ order += "cpu_temperature 0"
 # order += "wireless wlp2s0"
 order += "volume master"
 order += "battery 1"
+order += "weather"
 order += "time"
 
 load {
@@ -45,6 +46,10 @@ battery 1 {
 	path = "/sys/class/power_supply/BAT%d/uevent"
 	low_threshold = 10
 	integer_battery_capacity = true
+}
+
+weather {
+	command = " curl 'https://wttr.in/Villaverla?format=1'"
 }
 
 time {
