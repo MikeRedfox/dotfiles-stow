@@ -1,9 +1,9 @@
 #!/bin/bash
 
-img=$HOME/Pictures/Wallpapers/sunset_canada.jpeg;
+img=$HOME/Pictures/Wallpapers/japan.jpg;
 
 dunst &
-feh --bg-scale $img;
+feh --bg-center $img;
 killall picom;
 picom -b;
 redshift -P -O 5000;

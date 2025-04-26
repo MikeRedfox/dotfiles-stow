@@ -907,12 +907,30 @@ require("lazy").setup({
 						action = "e /home/mikr/dotfiles/zsh/.zshrc",
 						section = "Config",
 					},
+
+					{
+						name = "i3            ",
+						action = "e /home/mikr/dotfiles/i3/.config/i3/config",
+						section = "Config",
+					},
+
+					{
+						name = "autostart     ",
+						action = "e /home/mikr/dotfiles/i3/.config/i3/autostart.sh",
+						section = "Config",
+					},
+					{
+						name = "i3blocks      ",
+						action = "e /home/mikr/dotfiles/i3/.config/i3blocks/config",
+						section = "Config",
+					},
+
 					-- { name = "Qtile         ", action = "e /home/mike/.config/qtile/config.py", section = "Config" },
-					-- {
-					--  name = "Kitty        󰄛 ",
-					--  action = "e /home/mike/.config/kitty/kitty.conf",
-					--  section = "Config",
-					-- },
+					{
+						name = "Kitty        󰄛 ",
+						action = "e /home/mikr/dotfiles/kitty/.config/kitty/kitty.conf",
+						section = "Config",
+					},
 					--
 					-- {
 					--  name = "lfrc          ",
