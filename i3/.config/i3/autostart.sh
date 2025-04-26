@@ -1,6 +1,6 @@
 #!/bin/bash
 
-img=$HOME/Pictures/Wallpapers/japan.jpg;
+img=$HOME/Pictures/Wallpapers/torii.jpeg;
 
 dunst &
 feh --bg-center $img;

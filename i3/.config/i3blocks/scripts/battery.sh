@@ -15,6 +15,8 @@ capacity=$(cat "$bat_path/capacity")
 
 if [ "$status" == "Charging" ]; then
   icon="󱐋 "
+elif [ "$status" == "Full" ]; then
+  icon =" "
 fi
 
 if [ "$capacity" -lt 25 ]; then
