@@ -6,4 +6,4 @@ dunst &
 feh --bg-center $img;
 killall picom;
 picom -b;
-redshift -P -O 5000;
+redshift -P -O 4000;
