@@ -68,6 +68,9 @@ export BLOCK_SIZE="'1"          # Add commas to file sizes
 typeset -U path                 # keep duplicates out of the path
 path+=(.)                       # append current directory to path (controversial)
 . "$HOME/.cargo/env"            # For sh/bash/zsh/ash/dash/pdksh
+# . "/var/lib/snapd/snap/bin"
+export PATH=$PATH:/var/lib/snapd/snap/bin
+
 # BINDKEY
 bindkey -e
 bindkey '\e[3~' delete-char
