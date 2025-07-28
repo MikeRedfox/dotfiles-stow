@@ -1,0 +1,34 @@
+@import "./rose-pine.css";
+/* @import "./rose-pine-moon.css"; */
+/* @import "./rose-pine-dawn.css"; */
+
+
+* {
+  /* reference the color by using @color-name */
+  background: @base;
+  border: 2px solid @base;
+}
+
+#pulseaudio {
+	color: @gold
+}
+
+#network {
+	color: @pine
+}
+
+#memory {
+  color: @foam;
+}
+
+#temperature {
+  color: @rose;
+}
+
+#battery {
+	color:@love
+}
+
+#clock {
+	color: @iris
+}

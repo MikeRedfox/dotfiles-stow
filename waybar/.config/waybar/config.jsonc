@@ -13,17 +13,17 @@
         "hyprland/window"
     ],
     "modules-right": [
-        "mpd",
-        "idle_inhibitor",
+        // "mpd",
+        // "idle_inhibitor",
         "pulseaudio",
         "network",
         "power-profiles-daemon",
         "cpu",
         "memory",
         "temperature",
-        "backlight",
-        "keyboard-state",
-        "sway/language",
+        // "backlight",
+        // "keyboard-state",
+        // "sway/language",
         "battery",
         "battery#bat2",
         "clock",
@@ -110,6 +110,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format": "{:%H:%M %d.%m.%Y}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
