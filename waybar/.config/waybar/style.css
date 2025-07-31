@@ -65,7 +65,7 @@
     animation: flash_empty 2s infinite;
 }
 
-#battery.full {
+#battery.good {
     animation: flash_full 2s infinite;
 }
 
