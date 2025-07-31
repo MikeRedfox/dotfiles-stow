@@ -43,12 +43,6 @@
     100% { background-color: red; color: white; }
 }
 
-@keyframes flash_full {
-    0% { background-color: green; color: white; }
-    50% { background-color: white; color: green; }
-    100% { background-color: green; color: white; }
-}
-
 #battery {
 	color:#000000;
 	background-color: @love;
@@ -63,10 +57,6 @@
 
 #battery.warning {
     animation: flash_empty 2s infinite;
-}
-
-#battery.good {
-    animation: flash_full 2s infinite;
 }
 
 
