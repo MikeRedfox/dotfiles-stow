@@ -10,25 +10,69 @@
 }
 
 #pulseaudio {
-	color: @gold
+	color: #000000;
+	background-color: @gold;
+	border-radius: 6px;
+	border-width: 6px;
 }
 
 #network {
-	color: @pine
+	color: #000000;
+	background-color: @pine;
+	border-radius: 6px;
+	border-width: 6px;
 }
 
 #memory {
-  color: @foam;
+	color: #000000;
+	background-color: @foam;
+	border-radius: 6px;
+	border-width: 6px;
 }
 
 #temperature {
-  color: @rose;
+	color: #000000;
+	background-color: @rose;
+	border-radius: 6px;
+	border-width: 6px;
+}
+
+@keyframes flash_empty {
+    0% { background-color: red; color: white; }
+    50% { background-color: white; color: red; }
+    100% { background-color: red; color: white; }
+}
+
+@keyframes flash_full {
+    0% { background-color: green; color: white; }
+    50% { background-color: white; color: green; }
+    100% { background-color: green; color: white; }
 }
 
 #battery {
-	color:@love
+	color:#000000;
+	background-color: @love;
+	border-radius: 10%;
+	border-radius: 6px;
+	border-width: 6px;
 }
 
+#battery.critical {
+    animation: flash_empty 1s infinite;
+}
+
+#battery.warning {
+    animation: flash_empty 2s infinite;
+}
+
+#battery.full {
+    animation: flash_full 2s infinite;
+}
+
+
 #clock {
-	color: @iris
+	color: #000000;
+	background-color: @iris;
+	border-radius: 6px;
+	border-width: 6px;
 }
