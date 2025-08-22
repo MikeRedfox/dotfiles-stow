@@ -12,29 +12,29 @@
 #pulseaudio {
 	color: #000000;
 	background-color: @gold;
-	border-radius: 6px;
-	border-width: 6px;
+	border-radius: 60px;
+	/* border-width: 6px; */
 }
 
 #network {
 	color: #000000;
 	background-color: @pine;
-	border-radius: 6px;
-	border-width: 6px;
+	border-radius: 60px;
+	/* border-width: 6px; */
 }
 
 #memory {
 	color: #000000;
 	background-color: @foam;
-	border-radius: 6px;
-	border-width: 6px;
+	border-radius: 60px;
+	border-width: 0px;
 }
 
 #temperature {
 	color: #000000;
 	background-color: @rose;
-	border-radius: 6px;
-	border-width: 6px;
+	border-radius: 60px;
+	/* border-width: 6px; */
 }
 
 @keyframes flash_empty {
@@ -47,8 +47,8 @@
 	color:#000000;
 	background-color: @love;
 	border-radius: 10%;
-	border-radius: 6px;
-	border-width: 6px;
+	border-radius: 60px;
+	/* border-width: 6px; */
 }
 
 #battery.critical {
@@ -63,6 +63,6 @@
 #clock {
 	color: #000000;
 	background-color: @iris;
-	border-radius: 6px;
-	border-width: 6px;
+	border-radius: 60px;
+	/* border-width: 6px; */
 }
