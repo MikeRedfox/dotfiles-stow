@@ -126,7 +126,7 @@
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
         "format": " {temperatureC}°C {icon} ",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -136,8 +136,8 @@
     "battery": {
         "states": {
             "good": 79,
-            "warning": 30,
-            "critical": 15
+            "warning": 15,
+            "critical": 5
         },
         "format": " {capacity}% {icon} ",
         "format-full": " {capacity}% {icon} ",
