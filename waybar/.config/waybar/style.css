@@ -41,6 +41,10 @@
 	color: @maroon;
 }
 
+#workspaces button.active{
+	color: @flamingo;
+}
+
 .modules-right,
 .modules-left,
 .modules-center {
