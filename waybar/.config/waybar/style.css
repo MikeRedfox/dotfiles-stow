@@ -1,7 +1,7 @@
-@import "./rose-pine.css";
+/* @import "./rose-pine.css"; */
 /* @import "./rose-pine-moon.css"; */
 /* @import "./rose-pine-dawn.css"; */
-
+@import "mocha.css";
 
 * {
   /* reference the color by using @color-name */
@@ -9,60 +9,143 @@
   border: 2px solid @base;
 }
 
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#network,
 #pulseaudio {
-	color: #000000;
-	background-color: @gold;
-	border-radius: 60px;
-	/* border-width: 6px; */
+  padding: 0 10px;
+  color: @text;
+  border: 5px;
 }
-
-#network {
-	color: #000000;
-	background-color: @pine;
-	border-radius: 60px;
-	/* border-width: 6px; */
-}
-
-#memory {
-	color: #000000;
-	background-color: @foam;
-	border-radius: 60px;
-	border-width: 0px;
-}
-
-#temperature {
-	color: #000000;
-	background-color: @rose;
-	border-radius: 60px;
-	/* border-width: 6px; */
-}
-
-@keyframes flash_empty {
-    0% { background-color: red; color: white; }
-    50% { background-color: white; color: red; }
-    100% { background-color: red; color: white; }
-}
-
-#battery {
-	color:#000000;
-	background-color: @love;
-	border-radius: 10%;
-	border-radius: 60px;
-	/* border-width: 6px; */
-}
-
-#battery.critical {
-    animation: flash_empty 1s infinite;
-}
-
-#battery.warning {
-    animation: flash_empty 2s infinite;
-}
-
 
 #clock {
-	color: #000000;
-	background-color: @iris;
-	border-radius: 60px;
-	/* border-width: 6px; */
+	color: @mauve;
 }
+
+#temperature{
+	color: @blue;
+}
+
+#memory{
+	color: @green;
+}
+
+#network{
+	color: @yellow;
+}
+
+#pulseaudio{
+	color: @maroon;
+}
+
+.modules-right,
+.modules-left,
+.modules-center {
+  background-color: @base;
+  border-radius: 15px;
+}
+
+.modules-right {
+  padding: 0 10px;
+}
+
+.modules-left {
+  padding: 0 20px;
+}
+
+.modules-center {
+  padding: 0 10px;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @sapphire;
+}
+
+@keyframes blink {
+  to {
+    color: #000000;
+  }
+}
+
+/* Using steps() instead of linear as a timing function to limit cpu usage */
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #000000;
+}
+
+#pulseaudio.muted {
+  color: @text;
+}
+
+
+/* MY ROSEPINE */
+/* #pulseaudio { */
+/* 	color: #000000; */
+/* 	background-color: @gold; */
+/* 	border-radius: 60px; */
+/* 	 border-width: 6px; */
+/* } */
+/**/
+/* #network { */
+/* 	color: #000000; */
+/* 	background-color: @pine; */
+/* 	border-radius: 60px; */
+/* 	 border-width: 6px; */ 
+/* } */
+/**/
+/* #memory { */
+/* 	color: #000000; */
+/* 	background-color: @foam; */
+/* 	border-radius: 60px; */
+/* 	border-width: 0px; */
+/* } */
+/**/
+/* #temperature { */
+/* 	color: #000000; */
+/* 	background-color: @rose; */
+/* 	border-radius: 60px; */
+/* 	 border-width: 6px;  */
+/* } */
+/**/
+/* @keyframes flash_empty { */
+/*     0% { background-color: red; color: white; } */
+/*     50% { background-color: white; color: red; } */
+/*     100% { background-color: red; color: white; } */
+/* } */
+/**/
+/* #battery { */
+/* 	color:#000000; */
+/* 	background-color: @love; */
+/* 	border-radius: 10%; */
+/* 	border-radius: 60px; */
+/* 	 border-width: 6px;  */
+/* } */
+/**/
+/* #battery.critical { */
+/*     animation: flash_empty 1s infinite; */
+/* } */
+/**/
+/* #battery.warning { */
+/*     animation: flash_empty 2s infinite; */
+/* } */
+/**/
+/**/
+/* #clock { */
+/* 	color: #000000; */
+/* 	background-color: @iris; */
+/* 	border-radius: 60px; */
+/* 	 border-width: 6px;  */
+/* } */
