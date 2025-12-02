@@ -28,10 +28,9 @@ alias hg="history -1000 | grep -i"
 alias ..="cd .."
 alias ...="cd ../.."
 alias v="NVIM_APPNAME=nvim_up nvim "
-alias ins="sudo apt install"
+alias ins="sudo pacman -S"
 alias update="sudo pacman -Syyu"
 # alias rm="trash-put"
-
 # GIT
 # Do this: git config --global url.ssh://git@github.com/.insteadOf https://github.com
 alias gd="git diff"
@@ -89,6 +88,7 @@ bindkey ' '  magic-space
 
 # PLUGINS
 source ~/.zsh/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 # source ~/.zsh/zsh-syntax-highlighting.zsh
 # eval "$(starship init zsh)"
 # eval "$(zoxide init zsh)"
@@ -108,14 +108,14 @@ source ~/.zsh/zsh-autosuggestions.zsh
 # unset __conda_setup
 # <<< conda initialize <<<
 
-# fastfetch
+fastfetch
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-. "$HOME/.local/bin/env"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# . "$HOME/.local/bin/env"
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -131,3 +131,6 @@ esac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# ~/.zshrc
+
+eval "$(starship init zsh)"
