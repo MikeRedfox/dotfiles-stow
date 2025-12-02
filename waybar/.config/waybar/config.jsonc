@@ -7,10 +7,10 @@
     "spacing": 5, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        "sway/workspaces",
     ],
     "modules-center": [
-        "hyprland/window"
+        "sway/window"
     ],
     "modules-right": [
         // "mpd",
@@ -44,6 +44,22 @@
              // "5": "",
              "urgent": "",
              "active": "",
+             "default": ""
+         }
+     },
+     "sway/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "warp-on-scroll": false,
+         "format": "{name}: {icon}",
+         "format-icons": {
+             // "1": "",
+             // "2": "",
+             // "3": "",
+             // "4": "",
+             // "5": "",
+             "urgent": "",
+             "focused": "",
              "default": ""
          }
      },
