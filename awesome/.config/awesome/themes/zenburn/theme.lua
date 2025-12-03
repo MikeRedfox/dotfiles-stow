@@ -8,7 +8,7 @@ local dpi = require("beautiful.xresources").apply_dpi
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
+theme.wallpaper = "~/Pictures/wallpapers/iceberg_dark.png"
 -- }}}
 
 -- {{{ Styles
@@ -25,8 +25,8 @@ theme.bg_systray = theme.bg_normal
 -- }}}
 
 -- {{{ Borders
-theme.useless_gap = dpi(5)
-theme.border_width = dpi(2)
+theme.useless_gap = dpi(8)
+theme.border_width = dpi(4)
 theme.border_normal = "#3F3F3F"
 theme.border_focus = "#6F6F6F"
 theme.border_marked = "#CC9393"

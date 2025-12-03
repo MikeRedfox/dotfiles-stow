@@ -57,7 +57,7 @@ beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 terminal = "kitty"
 editor = "NVIM_APPNAME=nvim_up nvim"
 editor_cmd = terminal .. " -e " .. editor
-fileBrowser = "dolphin"
+fileBrowser = "pcmanfm"
 browser = "google-chrome-stable"
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -125,7 +125,15 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = wibox.widget.textclock(" %a %d/%m/%y %H:%M ")
+local month_calendar = awful.widget.calendar_popup.month()
+month_calendar:attach(mytextclock, "tr")
+
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
+local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -240,10 +248,19 @@ awful.screen.connect_for_each_screen(function(s)
 		s.mytasklist, -- Middle widget
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
-			mykeyboardlayout,
+			-- mykeyboardlayout,
 			wibox.widget.systray(),
+			volume_widget(),
+			spacing = 5,
+			cpu_widget(),
+			spacing = 5,
+			ram_widget({ color_used = "#dcdccc", color_free = "#3A3B3A" }),
+			spacing = 5,
+			batteryarc_widget(),
+			spacing = 5,
 			mytextclock,
 			s.mylayoutbox,
+			logout_menu_widget(),
 		},
 	})
 end)
@@ -537,7 +554,7 @@ awful.rules.rules = {
 	},
 
 	-- Add titlebars to normal clients and dialogs
-	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = true } },
+	{ rule_any = { type = { "normal", "dialog" } }, properties = { titlebars_enabled = false } },
 
 	-- Set Firefox to always map on the tag named "2" on screen 1.
 	-- { rule = { class = "Firefox" },
@@ -610,3 +627,7 @@ client.connect_signal("unfocus", function(c)
 	c.border_color = beautiful.border_normal
 end)
 -- }}}
+
+-- AUTOSTART
+
+awful.spawn.once("picom")
