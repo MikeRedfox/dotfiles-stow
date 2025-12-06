@@ -55,8 +55,8 @@ beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
-editor = "NVIM_APPNAME=nvim_up nvim"
-editor_cmd = terminal .. " -e " .. editor
+editor = "nvim"
+editor_cmd = terminal .. ' -e sh -c "NVIM_APPNAME=nvim_up nvim ~/.config/awesome/rc.lua"'
 fileBrowser = "pcmanfm"
 browser = "google-chrome-stable"
 -- Default modkey.
