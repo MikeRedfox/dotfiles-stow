@@ -30,7 +30,9 @@ alias ...="cd ../.."
 alias v="NVIM_APPNAME=nvim_up nvim "
 alias ins="sudo pacman -S"
 alias update="sudo pacman -Syyu"
-# alias rm="trash-put"
+alias py="python"
+
+alias rm="trash-put"
 # GIT
 # Do this: git config --global url.ssh://git@github.com/.insteadOf https://github.com
 alias gd="git diff"

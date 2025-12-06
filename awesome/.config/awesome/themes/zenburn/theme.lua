@@ -8,7 +8,7 @@ local dpi = require("beautiful.xresources").apply_dpi
 
 -- {{{ Main
 local theme = {}
-theme.wallpaper = "~/Pictures/wallpapers/iceberg_dark.png"
+theme.wallpaper = "~/.config/awesome/themes/zenburn/zenburn-background.png"
 -- }}}
 
 -- {{{ Styles
@@ -28,7 +28,7 @@ theme.bg_systray = theme.bg_normal
 theme.useless_gap = dpi(8)
 theme.border_width = dpi(4)
 theme.border_normal = "#3F3F3F"
-theme.border_focus = "#6F6F6F"
+theme.border_focus = "#6F8B71"
 theme.border_marked = "#CC9393"
 -- }}}
 
@@ -55,7 +55,7 @@ theme.titlebar_bg_normal = "#3F3F3F"
 --theme.fg_center_widget = "#88A175"
 --theme.fg_end_widget    = "#FF5656"
 --theme.bg_widget        = "#494B4F"
---theme.border_widget    = "#3F3F3F"
+-- theme.border_widget = "#3F3F3F"
 -- }}}
 
 -- {{{ Mouse finder
