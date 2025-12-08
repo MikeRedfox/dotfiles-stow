@@ -14,7 +14,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
-
+local udisks_mount = require("awesome-udisks2-mount.udisks")
+udisks_mount.start_monitor()
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
@@ -233,7 +234,21 @@ awful.screen.connect_for_each_screen(function(s)
 		filter = awful.widget.tasklist.filter.currenttags,
 		buttons = tasklist_buttons,
 	})
-
+	s.udisks_mount = udisks_mount({
+		screen = s,
+		buttons = gears.table.join(
+			-- mount on left click and open file manager
+			awful.button({}, 1, function(dev)
+				udisks_mount.mount(dev, function(path, dev, err)
+					if path ~= nil then
+						awful.spawn({ fileBrowser, path })
+					end
+				end)
+			end),
+			-- unmount on right click
+			awful.button({}, 3, udisks_mount.unmount_and_eject)
+		),
+	})
 	-- Create the wibox
 	s.mywibox = awful.wibar({ position = "top", screen = s })
 
@@ -251,6 +266,7 @@ awful.screen.connect_for_each_screen(function(s)
 			layout = wibox.layout.fixed.horizontal,
 			-- mykeyboardlayout,
 			wibox.widget.systray(),
+			s.udisks_mount,
 			volume_widget(),
 			spacing = 5,
 			cpu_widget(),
