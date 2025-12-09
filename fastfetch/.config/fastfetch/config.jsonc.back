@@ -1,0 +1,83 @@
+{
+  "logo": {
+    "width": 28
+  },
+
+  "display": {
+    "separator": "    "
+  },
+
+  // The order of modules printed
+  "modules": [
+    {
+      "type": "custom",
+      "content": "┌───────── \u001b[1mHardware Information\u001b[0m ─────────┐"
+    },
+    {
+      "type": "host",
+      "key": "   ",
+      "format": "{2}"
+    },
+    {
+      "type": "cpu",
+      "key": "   ",
+      "format": "{1}"
+    },
+    {
+      "type": "memory",
+      "key": "   "
+    },
+    {
+      "type": "custom",
+      "content": "├───────── \u001b[1mSoftware Information\u001b[0m ─────────┤"
+    },
+    {
+      "type": "users",
+      "key": "  ",
+      "format": "{1}"
+    },
+    {
+      "type": "os",
+      "key": "  ",
+      "format": "{2}"
+    },
+    {
+      "type": "kernel",
+      "key": "  "
+    },
+    {
+      "type": "wm",
+      "key": "  ",
+      "format": "{2}"
+    },
+    {
+      "type": "shell",
+      "key": "  "
+    },
+    {
+      "type": "terminal",
+      "key": "  "
+    },
+    {
+      "type": "terminalfont",
+      "key": "  "
+    },
+    {
+      "type": "packages",
+      "key": "   "
+    },
+    {
+      "type": "uptime",
+      "key": "  "
+    },
+    {
+      "type": "custom",
+      "content": "└────────────────────────────────────────┘"
+    },
+    {
+      "type": "custom",
+      "content": "    \u001b[38m \u001b[37m \u001b[36m \u001b[35m \u001b[34m \u001b[33m \u001b[32m \u001b[31m"
+    }
+  ]
+}
+
