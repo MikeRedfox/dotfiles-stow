@@ -60,7 +60,7 @@ terminal = "kitty"
 editor = "nvim"
 editor_cmd = terminal .. ' -e sh -c "NVIM_APPNAME=nvim_up nvim ~/.config/awesome/rc.lua"'
 fileBrowser = "pcmanfm"
-browser = "google-chrome-stable"
+browser = "firefox"
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,

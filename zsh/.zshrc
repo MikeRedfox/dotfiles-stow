@@ -31,7 +31,7 @@ alias v="NVIM_APPNAME=nvim_up nvim "
 alias ins="sudo pacman -S"
 alias update="sudo pacman -Syyu"
 alias py="python"
-
+alias tree="exa --icons --tree"
 alias rm="trash-put"
 # GIT
 # Do this: git config --global url.ssh://git@github.com/.insteadOf https://github.com
@@ -92,7 +92,6 @@ bindkey ' '  magic-space
 source ~/.zsh/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 # source ~/.zsh/zsh-syntax-highlighting.zsh
-# eval "$(starship init zsh)"
 # eval "$(zoxide init zsh)"
 
 # >>> conda initialize >>>
@@ -116,7 +115,7 @@ fastfetch
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# . "$HOME/.local/bin/env"
+. "$HOME/.local/bin/env"
 # source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

@@ -41,6 +41,22 @@ vim.api.nvim_create_autocmd({ "BufReadPost" }, {
 	end,
 })
 
+vim.keymap.set("n", "<C-s>", "<cmd>w<CR>")
+
+-- AUTORUN
+vim.keymap.set("n", "<C-x>", function()
+	local name_of_file = vim.api.nvim_buf_get_name(0)
+	local ft = vim.bo.filetype
+
+	if ft == "python" then
+		vim.api.nvim_exec2(":! uv run " .. name_of_file, {})
+	elseif ft == "rust" then
+		vim.api.nvim_exec2(":! cargo run " .. name_of_file, {})
+	else
+		vim.notify("Non so come eseguire questo file..", vim.log.levels.WARN)
+	end
+end, { desc = "[C]ode e[X]ecute" })
+
 -- Enable break indent
 vim.o.breakindent = true
 
