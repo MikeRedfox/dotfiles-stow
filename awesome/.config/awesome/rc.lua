@@ -651,5 +651,6 @@ end)
 
 -- AUTOSTART
 
-awful.spawn.once("picom")
+-- awful.spawn.once("picom")
 awful.spawn.once("redshift -PO 4500")
+awful.spawn.once("xset s off && xset -dpms")

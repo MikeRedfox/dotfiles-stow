@@ -74,3 +74,25 @@ ls.add_snippets("all", {
 	s("tilde", { t({ "~" }) }),
 	s("backtick", { t({ "`" }) }),
 })
+
+ls.add_snippets("typescript", {
+	s("cl", fmt("console.log({})", { i(0) })),
+	s(
+		"fori",
+		fmt("for ( let {} = {}; {} < {}; {}) {{\n {} \n {} \n}}", {
+			i(1, "i"), -- Variabile di iterazione
+			i(2, "0"), -- Valore iniziale
+			f(function(args)
+				return args[1][1]
+			end, { 1 }), -- Condizione dinamica basata sulla variabile
+			i(0, "n"),
+			f(function(args)
+				return args[1][1] .. "+=1"
+			end, { 1 }), -- Incremento dinamico basato sulla variabile
+			f(function(args)
+				return "console.log(" .. args[1][1] .. ")"
+			end, { 1 }), -- Corpo del ciclo, usa la variabile
+			i(0),
+		})
+	),
+})

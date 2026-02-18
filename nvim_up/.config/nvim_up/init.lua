@@ -52,6 +52,8 @@ vim.keymap.set("n", "<C-x>", function()
 		vim.api.nvim_exec2(":! uv run " .. name_of_file, {})
 	elseif ft == "rust" then
 		vim.api.nvim_exec2(":! cargo run " .. name_of_file, {})
+	elseif ft == "typescript" then
+		vim.api.nvim_exec2(":! bun run " .. name_of_file, {})
 	else
 		vim.notify("Non so come eseguire questo file..", vim.log.levels.WARN)
 	end
