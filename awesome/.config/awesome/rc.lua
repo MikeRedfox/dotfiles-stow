@@ -59,7 +59,7 @@ beautiful.init("~/.config/awesome/themes/zenburn/theme.lua")
 terminal = "kitty"
 editor = "nvim"
 editor_cmd = terminal .. ' -e sh -c "NVIM_APPNAME=nvim_up nvim ~/.config/awesome/rc.lua"'
-fileBrowser = "pcmanfm"
+fileBrowser = "thunar"
 browser = "firefox"
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
